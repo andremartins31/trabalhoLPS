@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel chosenLayoutAlgorithm="1">
+		<struct>
+			<and abstract="true" mandatory="true" name="Shopping">
+				<and mandatory="true" name="Shop">
+					<and name="paymentMethod">
+						<feature name="Cart"/>
+						<feature name="BankSlip"/>
+					</and>
+				</and>
+				<feature abstract="true" mandatory="true" name="Sell"/>
+				<and name="Search">
+					<feature name="Location"/>
+				</and>
+				<feature name="User"/>
+				<feature name="Complaint"/>
+				<feature name="Reputation"/>
+				<and name="Share">
+					<feature name="Facebook"/>
+					<feature name="Twitter"/>
+					<feature name="Instagran"/>
+				</and>
+				<and name="Negotiation">
+					<feature name="Chat"/>
+					<feature name="Email"/>
+				</and>
+				<and name="Article">
+					<feature name="Service"/>
+					<feature name="Automobile"/>
+					<feature name="Building"/>
+					<feature name="Other"/>
+					<feature name="Product"/>
+				</and>
+				<feature name="Category"/>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
