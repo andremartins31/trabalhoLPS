@@ -8,7 +8,10 @@
 						<feature name="BankSlip"/>
 					</and>
 				</and>
-				<feature mandatory="true" name="User"/>
+				<and mandatory="true" name="User">
+					<feature mandatory="true" name="Seller"/>
+					<feature name="Buyer"/>
+				</and>
 				<feature name="Complaint"/>
 				<alt name="Reputation">
 					<feature mandatory="true" name="Badges"/>
