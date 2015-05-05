@@ -1,0 +1,21 @@
+# Lists all features from the model with manual (first digit) and automatic (second digit) selection
+# 0 = deselected, 1 = selected, 2 = undefined
+21Shopping
+21Shop
+22paymentMethod
+22Cart
+22BankSlip
+21User
+21Denuncia
+22Reputation
+22Negotiation
+22Chat
+22Email
+21Sell
+21Produto
+22Service
+22Automobile
+22Building
+22Other
+22Product
+21Search

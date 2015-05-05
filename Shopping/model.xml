@@ -3,33 +3,33 @@
 		<struct>
 			<and abstract="true" mandatory="true" name="Shopping">
 				<and mandatory="true" name="Shop">
-					<and name="paymentMethod">
+					<and abstract="true" name="paymentMethod">
 						<feature mandatory="true" name="Card"/>
 						<feature name="BankSlip"/>
 					</and>
 				</and>
 				<feature mandatory="true" name="User"/>
 				<feature name="Complaint"/>
-				<and name="Reputation">
-					<feature name="Badges"/>
-					<feature name="Points"/>
-				</and>
-				<alt name="Negotiation">
+				<alt name="Reputation">
+					<feature mandatory="true" name="Badges"/>
+					<feature mandatory="true" name="Points"/>
+				</alt>
+				<or name="Negotiation">
 					<feature mandatory="true" name="Chat">
 						<description>
 							
 						</description>
 					</feature>
 					<feature mandatory="true" name="Email"/>
-				</alt>
-				<feature abstract="true" mandatory="true" name="Sell"/>
-				<and mandatory="true" name="ProductCadastre">
-					<feature name="Service"/>
-					<feature name="Automobile"/>
-					<feature name="Building"/>
-					<feature name="Other"/>
-					<feature name="Product"/>
-				</and>
+				</or>
+				<feature mandatory="true" name="Sell"/>
+				<or mandatory="true" name="ProductCadastre">
+					<feature mandatory="true" name="Service"/>
+					<feature mandatory="true" name="Automobile"/>
+					<feature mandatory="true" name="Building"/>
+					<feature mandatory="true" name="Other"/>
+					<feature mandatory="true" name="Product"/>
+				</or>
 				<feature mandatory="true" name="Search"/>
 			</and>
 		</struct>
@@ -42,9 +42,9 @@
 			</rule>
 			<rule>
 				<imp>
-					<var>Badges</var>
+					<var>Chat</var>
 					<not>
-						<var>Points</var>
+						<var>Email</var>
 					</not>
 				</imp>
 			</rule>
