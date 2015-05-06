@@ -1,0 +1,22 @@
+/**
+ * TODO description
+ */
+public class Product extends ProductCadastre{
+
+	private EnumProduct tipo;
+	private String estadoDoProduto;
+	
+	public EnumProduct getTipo() {
+		return tipo;
+	}
+	public void setTipo(EnumProduct tipo) {
+		this.tipo = tipo;
+	}
+	public String getEstadoDoProduto() {
+		return estadoDoProduto;
+	}
+	public void setEstadoDoProduto(String estadoDoProduto) {
+		this.estadoDoProduto = estadoDoProduto;
+	}
+	
+}

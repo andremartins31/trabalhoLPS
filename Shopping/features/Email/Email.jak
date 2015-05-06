@@ -1,0 +1,22 @@
+/**
+ * TODO description
+ */
+public class Email extends Negotiation{
+
+	private String texto;
+	private String assunto;
+	
+	public String getTexto() {
+		return texto;
+	}
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+	public String getAssunto() {
+		return assunto;
+	}
+	public void setAssunto(String assunto) {
+		this.assunto = assunto;
+	}
+	
+}

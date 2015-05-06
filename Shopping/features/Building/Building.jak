@@ -1,0 +1,63 @@
+/**
+ * TODO description
+ */
+public class Building extends ProductCadastre{
+
+	private String estado;
+	private String cidade;
+	private String bairro;
+	private String rua;
+	private String numero;
+	private String numeroQuatos;
+	private String numeroBanheiro;
+	private String numOutrosProdutos;
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public String getRua() {
+		return rua;
+	}
+	public void setRua(String rua) {
+		this.rua = rua;
+	}
+	public String getNumero() {
+		return numero;
+	}
+	public void setNumero(String numero) {
+		this.numero = numero;
+	}
+	public String getNumeroQuatos() {
+		return numeroQuatos;
+	}
+	public void setNumeroQuatos(String numeroQuatos) {
+		this.numeroQuatos = numeroQuatos;
+	}
+	public String getNumeroBanheiro() {
+		return numeroBanheiro;
+	}
+	public void setNumeroBanheiro(String numeroBanheiro) {
+		this.numeroBanheiro = numeroBanheiro;
+	}
+	public String getNumOutrosProdutos() {
+		return numOutrosProdutos;
+	}
+	public void setNumOutrosProdutos(String numOutrosProdutos) {
+		this.numOutrosProdutos = numOutrosProdutos;
+	}
+	
+}

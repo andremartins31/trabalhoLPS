@@ -1,0 +1,15 @@
+/**
+ * TODO description
+ */
+public class Buyer extends User{
+
+	private List<ProductCadastre> produtos;
+
+	public List<ProductCadastre> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(List<ProductCadastre> produtos) {
+		this.produtos = produtos;
+	}
+}

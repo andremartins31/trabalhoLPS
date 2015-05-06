@@ -1,0 +1,21 @@
+/**
+ * TODO description
+ */
+public class Other extends ProductCadastre{
+
+	private String tipo;
+	private String localizacaoVendedor;
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public String getLocalizacaoVendedor() {
+		return localizacaoVendedor;
+	}
+	public void setLocalizacaoVendedor(String localizacaoVendedor) {
+		this.localizacaoVendedor = localizacaoVendedor;
+	}
+	
+}

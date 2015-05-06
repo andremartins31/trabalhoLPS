@@ -1,0 +1,25 @@
+/**
+ * TODO description
+ */
+public class Complaint {
+
+	private long id;
+	private String denuncia;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getDenuncia() {
+		return denuncia;
+	}
+
+	public void setDenuncia(String denuncia) {
+		this.denuncia = denuncia;
+	}
+	
+}

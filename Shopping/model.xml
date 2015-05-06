@@ -3,7 +3,7 @@
 		<struct>
 			<and abstract="true" mandatory="true" name="Shopping">
 				<and mandatory="true" name="Shop">
-					<and abstract="true" name="paymentMethod">
+					<and name="paymentMethod">
 						<feature mandatory="true" name="Card"/>
 						<feature name="BankSlip"/>
 					</and>
@@ -49,6 +49,12 @@
 					<not>
 						<var>Email</var>
 					</not>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>Negotiation</var>
+					<var>Buyer</var>
 				</imp>
 			</rule>
 		</constraints>

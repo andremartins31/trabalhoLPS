@@ -1,0 +1,12 @@
+/**
+ * TODO description
+ */
+public class Badges extends Reputation{
+
+	@Override
+	public void avaliar(String valor) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,12 @@
+/**
+ * TODO description
+ */
+public class BankSlip extends PaymentMethod{
+
+	@Override
+	public void efetuarPagamento(User comprador, User vendendor) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

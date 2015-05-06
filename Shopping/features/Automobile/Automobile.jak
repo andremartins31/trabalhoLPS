@@ -1,0 +1,56 @@
+/**
+ * TODO description
+ */
+public class Automobile extends ProductCadastre{
+	
+	private String marca;
+	private String modelo;
+	private String ano;
+	private String combustivel;
+	private String numeroPortas;
+	private String quilometrosRodados;
+	private String localizacaoVendedor;
+	public String getMarca() {
+		return marca;
+	}
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+	public String getModelo() {
+		return modelo;
+	}
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+	public String getAno() {
+		return ano;
+	}
+	public void setAno(String ano) {
+		this.ano = ano;
+	}
+	public String getCombustivel() {
+		return combustivel;
+	}
+	public void setCombustivel(String combustivel) {
+		this.combustivel = combustivel;
+	}
+	public String getNumeroPortas() {
+		return numeroPortas;
+	}
+	public void setNumeroPortas(String numeroPortas) {
+		this.numeroPortas = numeroPortas;
+	}
+	public String getQuilometrosRodados() {
+		return quilometrosRodados;
+	}
+	public void setQuilometrosRodados(String quilometrosRodados) {
+		this.quilometrosRodados = quilometrosRodados;
+	}
+	public String getLocalizacaoVendedor() {
+		return localizacaoVendedor;
+	}
+	public void setLocalizacaoVendedor(String localizacaoVendedor) {
+		this.localizacaoVendedor = localizacaoVendedor;
+	}
+	
+}

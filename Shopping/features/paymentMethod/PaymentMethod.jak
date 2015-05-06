@@ -1,0 +1,6 @@
+
+public abstract class PaymentMethod {
+	
+	public abstract void efetuarPagamento(User comprador, User vendendor);
+	
+}
