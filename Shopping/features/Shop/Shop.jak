@@ -1,7 +1,7 @@
 
 public class Shop {
 
-	private long id;
+/*	private long id;
 	private User comprador;
 	private Sell venda;
 	private PaymentMethod formaPagamento;
@@ -29,5 +29,5 @@ public class Shop {
 	public void setFormaPagamento(PaymentMethod formaPagamento) {
 		this.formaPagamento = formaPagamento;
 	}
-		
+		*/
 }

@@ -1,6 +1,6 @@
 
-public class Service extends ProductCadastre{
-
+public refines class Service {
+/*
 	private EnumService tipo;
 	private String localizacao;
 	private String areaAtuacao;
@@ -28,6 +28,6 @@ public class Service extends ProductCadastre{
 	}
 	public void setDadosDeContato(String dadosDeContato) {
 		this.dadosDeContato = dadosDeContato;
-	}
+	}*/
 		
 }

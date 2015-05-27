@@ -3,7 +3,7 @@
  */
 public class Chat extends Negotiation{
 
-	private List<String> bate_papo;
+	/*private List<String> bate_papo;
 
 	public List<String> getBate_papo() {
 		return bate_papo;
@@ -12,5 +12,5 @@ public class Chat extends Negotiation{
 	public void setBate_papo(List<String> bate_papo) {
 		this.bate_papo = bate_papo;
 	}
-	
+	*/
 }
