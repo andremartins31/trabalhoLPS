@@ -7,7 +7,7 @@
 		
 		<properties>
 			<!--  <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://postgres84104-master.j.layershift.co.uk/guiaradical" /> --> 
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/guiaradical" />  
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/shopping" />  
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 			
 			<!-- Password = RZst74IE01  -->
