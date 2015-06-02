@@ -13,21 +13,13 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>primeiraServlet</servlet-name>
 		<servlet-class>HelloWorld</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>primeiraServlet</servlet-name>
 		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>userControler</servlet-name>
-		<servlet-class>UserController</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>userControler</servlet-name>
-		<url-pattern>/cadastrarUser</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	
 </web-app>
