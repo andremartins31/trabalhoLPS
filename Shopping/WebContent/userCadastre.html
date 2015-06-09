@@ -57,7 +57,7 @@
 	<div class="single-product-area">
 		<div class="zigzag-bottom"></div>
 		<div class="container">
-			<form enctype="multipart/form-data" action="#" class="checkout"
+			<form class="checkout"
 				method="post" name="checkout">
 
 				<div id="customer_details" class="col2-set">
@@ -72,7 +72,7 @@
 								class="form-row form-row-first validate-required">
 								<label class="" for="billing_first_name">First Name <abbr
 									title="required" class="required">*</abbr>
-								</label> <input type="text" value="" placeholder=""
+								</label> <input type="text" ng-model="user.name" value="" placeholder=""
 									id="billing_first_name" name="billing_first_name"
 									class="input-text ">
 							</p>
@@ -81,7 +81,7 @@
 								class="form-row form-row-last validate-required">
 								<label class="" for="billing_last_name">Last Name <abbr
 									title="required" class="required">*</abbr>
-								</label> <input type="text" value="" placeholder=""
+								</label> <input type="text" value="" ng-model="user.lastName" placeholder=""
 									id="billing_last_name" name="billing_last_name"
 									class="input-text ">
 							</p>
@@ -93,7 +93,7 @@
 								class="form-row form-row-first validate-required validate-email">
 								<label class="" for="billing_email">Email Address <abbr
 									title="required" class="required">*</abbr>
-								</label> <input type="text" value="" placeholder="" id="billing_email"
+								</label> <input type="text" value="" ng-model="user.email" placeholder="" id="billing_email"
 									name="billing_email" class="input-text ">
 							</p>
 
@@ -101,12 +101,14 @@
 								class="form-row form-row-last validate-required validate-phone">
 								<label class="" for="billing_phone">Phone <abbr
 									title="required" class="required">*</abbr>
-								</label> <input type="text" value="" placeholder="" id="billing_phone"
+								</label> <input type="text" value="" placeholder="" ng-model="user.phone" id="billing_phone"
 									name="billing_phone" class="input-text ">
 							</p>
 							<div class="clear"></div>
+							<button class="btn btn-success" ng-click="cadastrar()">Cadastrar</button>
 						</div>
 					</div>
+					
 
 					<div class="col-2">
 						<div class="woocommerce-shipping-fields">
