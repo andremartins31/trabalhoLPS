@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopping">
+
+<head ng-include="'template/head.html'">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/shopping.js"></script>
+</head>
+<body ng-controller="userCadastreControl">
+
+	<div ng-include="'template/header.html'"></div>
+
+	<!-- End mainmenu area -->
+	<div class="single-product-area">
+		<div class="zigzag-bottom"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4"></div>
+				<div class="col-md-8">
+				<form class="checkout"
+				method="post" name="checkout">
+
+				<div id="customer_details" class="col2-set">
+				<div class="col-1"></div>
+					<div class="col-1">
+						<div class="woocommerce-billing-fields">
+							<h3>Login</h3>
+							<p id="billing_country_field"
+								class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+								
+							<p id="billing_email_field"
+								class="form-row form-row-first validate-required validate-email">
+								<label class="" for="email">Email <abbr
+									title="required" class="required">*</abbr>
+								</label> <input type="text" value="" ng-model="user.email" placeholder="" 
+									name="email" class="input-text ">
+							</p>
+
+							<p id="billing_phone_field"
+								class="form-row form-row-last validate-required validate-phone">
+								<label class="" for="senha">Senha <abbr
+									title="required" class="required">*</abbr>
+								</label> <input type="password" value="" placeholder="" ng-model="user.senha"
+									name="senha" class="input-text ">
+							</p>
+							<div class="clear"></div>
+							<button class="btn btn-success" ng-click="cadastrar()">Logar</button>
+						</div>
+					</div>					
+			</form>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	<div ng-include="'template/footer.html'"></div>>
+</body>
+</html>
