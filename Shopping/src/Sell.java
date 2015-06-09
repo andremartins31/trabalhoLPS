@@ -1,0 +1,29 @@
+
+
+
+public class Sell {
+	
+	private long id;
+	//private ProductCadastre produto;
+	private User vendedor;
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		((Sell) this).id = id;
+	}
+	/*public ProductCadastre getProduto() {
+		return produto;
+	}
+	public void setProduto(ProductCadastre produto) {
+		this.produto = produto;
+	}*/
+	public User getVendedor() {
+		return vendedor;
+	}
+	public void setVendedor(User vendedor) {
+		((Sell) this).vendedor = vendedor;
+	}
+	
+}

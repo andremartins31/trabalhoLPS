@@ -1,0 +1,35 @@
+
+
+
+public class Shop {
+
+/*	private long id;
+	private User comprador;
+	private Sell venda;
+	private PaymentMethod formaPagamento;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public User getComprador() {
+		return comprador;
+	}
+	public void setComprador(User comprador) {
+		this.comprador = comprador;
+	}
+	public Sell getVenda() {
+		return venda;
+	}
+	public void setVenda(Sell venda) {
+		this.venda = venda;
+	}
+	public PaymentMethod getFormaPagamento() {
+		return formaPagamento;
+	}
+	public void setFormaPagamento(PaymentMethod formaPagamento) {
+		this.formaPagamento = formaPagamento;
+	}
+		*/
+}
