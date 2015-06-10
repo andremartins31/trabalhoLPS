@@ -196,10 +196,23 @@ div.coupon input[type="text"] {
   margin-bottom: 40px;
   width: 100%;
 }  
-    
-    
 }
+.productArea{
+	position: relative;
+	display:inline-block;
+	background: #fff;
+	width: 200px;
+	height:260px;
+	top:0px;
+	margin: 10px;
+	border: #E2DDDD solid thin;
+	border-radius: 5px;
+}    
 
+.productArea > h3{
+	text-align: center;
+	margin: 15px;
+}
 
 
 

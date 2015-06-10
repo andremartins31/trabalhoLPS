@@ -1,0 +1,52 @@
+<form class="checkout" method="post" name="checkout">
+
+	<div id="customer_details" class="col2-set">
+		<div class="col-1">
+			<div class="woocommerce-billing-fields">
+				<h3>Cadastro de Produto</h3>
+				<p id="billing_country_field"
+					class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+					<label class="" for="titulo">Título do Anúncio <abbr title="required"
+						class="required">*</abbr>
+
+					</label> <input type="text" ng-model="produto.titulo" value="" placeholder=""
+						name="titulo" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="descricao">Descrição <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" ng-model="produto.descricao"
+						placeholder="" name="descricao" class="input-text ">
+				</p>
+				
+				<div class="clear"></div>
+
+				<p class="form-row form-row-first validate-required validate-email">
+					<label class="" for="foto">Fotos <abbr title="required"
+						class="required">*</abbr>
+					</label> <input type="foto" value="" ng-model="produto.foto" placeholder=""
+						name="email" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="preco">Preço <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="produto.preco"
+						id="telefone" name="preco" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="tipo">Tipo <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="produto.preco"
+						id="telefone" name="preco" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="estado">Estado de conservação <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="produto.preco"
+						id="telefone" name="preco" class="input-text ">
+				</p>
+				<div class="clear"></div>
+				<button class="btn btn-success" ng-click="cadastrar()">Cadastrar</button>
+			</div>
+		</div>
+</form>
