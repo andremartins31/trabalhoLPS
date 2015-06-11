@@ -46,7 +46,7 @@
 									<div class="clear"></div>
 
 									<p 
-										class="form-row form-row-first validate-required validate-email">
+										class="form-row form-row-last validate-required validate-email">
 										<label class="" for="email">Email <abbr
 											title="required" class="required">*</abbr>
 										</label> <input type="email" value="" ng-model="user.email"
@@ -58,6 +58,22 @@
 											title="required" class="required">*</abbr>
 										</label> <input type="tel" value="" placeholder=""
 											ng-model="user.telefone" id="telefone" name="telefone"
+											class="input-text ">
+									</p>
+									<p 
+										class="form-row form-row-last validate-required">
+										<label class="" for="senha">Senha <abbr
+											title="required" class="required">*</abbr>
+										</label> <input type="password" value="" placeholder=""
+											ng-model="user.senha" id="senha" name="senha"
+											class="input-text ">
+									</p>
+									<p 
+										class="form-row form-row-last validate-required">
+										<label class="" for="confirmed-senha">Confirmar Senha <abbr
+											title="required" class="required">*</abbr>
+										</label> <input type="password" value="" placeholder=""
+											 id="confirmed-senha" name="confirmed-senha"
 											class="input-text ">
 									</p>
 									<div class="clear"></div>
