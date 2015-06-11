@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ProductCadastre {
 	
-	/*private long id;
+	private long id;
 	private String titulo;
 	private String descricao;
 	private List<String> fotos;
@@ -40,5 +40,5 @@ public class ProductCadastre {
 		this.preco = preco;
 	}
 	
-*/	
+	
 }

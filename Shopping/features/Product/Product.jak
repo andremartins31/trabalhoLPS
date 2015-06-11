@@ -1,7 +1,7 @@
 /**
  * TODO description
  */
-public class Product extends ProductCadastre{
+public refines class Product{
 
 	private EnumProduct tipo;
 	private String estadoDoProduto;
