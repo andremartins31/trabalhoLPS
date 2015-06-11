@@ -5,19 +5,18 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-SoUrCe RooT User "../features/User/UserController.jak";
 @WebServlet("/cadastrarUser")
-public class UserController extends HttpServlet {
+public class UserCadastre extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
-		System.out.println(request.getParameter("name"));
-		
+				
 		User user = new User();
-		user.setNome(request.getParameter("name"));
+		user.setNome(request.getParameter("nome"));
 		user.setEmail(request.getParameter("email"));
+		user.setSobrenome(request.getParameter("sobrenome"));
+		user.setTelefone(request.getParameter("telefone"));
+		user.setSenha(request.getParameter("senha"));
 		UsuarioDAO dao= new UsuarioDAO();
 		dao.beginTransaction();
 		dao.save(user);

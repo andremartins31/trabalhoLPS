@@ -82,4 +82,21 @@ shopping.controller('userCadastreControl', function ($scope,$http) {
 	
 >>>>>>> 1e43450112e82ae5a4ee3576a2ab42d0769968fc
 	};
+	
+	$scope.logar= function(){
+			
+			$http( {method:'POST',
+				url:'login',
+				data: serializeData($scope.user),
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
+			).success(function(data, status, headers, config) {
+			    console.log("sucess");
+			  }).error(function(data, status, headers, config) {
+			    // called asynchronously if an error occurs
+			    // or server returns response with an error status.
+				  console.log("Erro");
+			  });
+			
+		
+		};
 });
