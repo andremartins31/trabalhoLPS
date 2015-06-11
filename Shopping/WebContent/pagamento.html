@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopping">
+
+<head ng-include="'template/head.html'">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/shopping.js"></script>
+</head>
+<body ng-controller="userCadastreControl">
+
+	<div ng-include="'template/header.html'"></div>
+	<div class="single-product-area">
+		<div class="zigzag-bottom"></div>
+		<div class="container">
+
+			<div class="col-md-12 well">
+				<div class="row tipoPagamento">
+					<div class="col-md-8 ">
+						<span class="tituloProductConfirm tituloProductDetail">Formas
+							de pagamento</span>
+
+						<div class="row ">
+							<button class="pagamentoCartao">
+								<img src="img/Formas-de-Pagamento.png"></
+							</button>
+							<button class="pagamentoBoleto">
+								<img src="img/boleto-icone.png">
+							</button>
+
+						</div>
+
+						<button class=" btn btn-confirmarPagamento">Confirmar
+							Pagamento</button>
+					</div>
+				</div>
+				<hr/>
+				<div class="row ">
+					<div class="col-md-4">
+					<span class="tituloProductDetail">Informações da Entrega</span>
+					</div>
+					<div class="col-md-8">
+						<span class="rotulo">Endereço: RUA Antônio Martins de ALmeida</span> 
+						<span
+							class="rotulo">Bairo: Dom Maurrício</span> 
+							<span
+							class="rotulo">Cidade/Estado: Quixadá-Ceará</span>
+					</div>
+
+				</div>
+				<hr/>
+				<div class="row" ng-include="'pagametoDetailsPart/productDetailPart.html'">
+					
+
+			</div>
+		</div>
+	</div>	
+	<div ng-include="'template/footer.html'"></div>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+</body>
+</html>

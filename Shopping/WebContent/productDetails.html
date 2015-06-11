@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shopping">
+
+<head ng-include="'template/head.html'">
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/shopping.js"></script>
+</head>
+<body ng-controller="userCadastreControl">
+
+	<div ng-include="'template/header.html'"></div>
+	<div class="single-product-area">
+		<div class="zigzag-bottom"></div>
+		<div class="container">
+			<div class="row" ng-include="'detailsPart/productDetail.html'">
+				
+
+			</div>
+		</div>
+	</div>
+	<div ng-include="'template/footer.html'"></div>
+	<script src="https://code.jquery.com/jquery.min.js"></script>
+</body>
+</html>
