@@ -1,15 +1,17 @@
-/**
- * TODO description
- */
+
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "Product")
 public refines class Product{
 
-	private EnumProduct tipo;
+	private String tipo;
 	private String estadoDoProduto;
 	
-	public EnumProduct getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(EnumProduct tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 	public String getEstadoDoProduto() {

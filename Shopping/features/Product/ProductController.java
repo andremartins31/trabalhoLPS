@@ -1,5 +1,6 @@
 
 import java.io.IOException;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -13,9 +14,20 @@ public class ProductController  extends HttpServlet{
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println(request.getParameter("name"));
+		System.out.println(request.getParameter("estado"));
 		
+		Product produto= new Product();
+		produto.setEstadoDoProduto(request.getParameter("estado"));
+		produto.setDescricao(request.getParameter("descricao"));
+		produto.setFoto(request.getParameter("foto"));
+		produto.setPreco(request.getParameter("preco"));
+		produto.setTipo(request.getParameter("tipo"));
+		produto.setTitulo(request.getParameter("titulo"));
 		
+		ProductDao dao= new ProductDao();
+		dao.beginTransaction();
+		dao.save(produto);
+		dao.close();		
 	}
 	
 }
