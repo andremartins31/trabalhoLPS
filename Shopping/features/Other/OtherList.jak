@@ -7,16 +7,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/listarAutomobile")
-public class AutomobileList extends HttpServlet {
+@WebServlet("/listarOther)
+public class OtherList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void service(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		AutomobileDao dao= new AutomobileDao();
+		OtherDao dao= new OtherDao();
 		dao.beginTransaction();
-		List<Automobile> lista = dao.find();
+		List<Other> lista = dao.find();
 		dao.close();	
 		
 		String json = new Gson().toJson(lista);

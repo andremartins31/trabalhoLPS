@@ -1,0 +1,76 @@
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+SoUrCe RooT ProductCadastre "../features/ProductCadastre/Product.jak";
+
+@Entity
+@Table(name= "Product")
+abstract class Product$$ProductCadastre{
+	
+	@Id
+	@GeneratedValue
+	protected long id;
+	protected String titulo;
+	protected String descricao;
+	protected String foto;
+	protected String preco;
+	protected long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getTitulo() {
+		return titulo;
+	}
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+	
+	public String getPreco() {
+		return preco;
+	}
+	public void setPreco(String preco) {
+		this.preco = preco;
+	}
+	
+	public String getFoto(){
+		return foto;
+	}
+	public void setFoto(String foto){
+		this.foto=foto;
+	}
+}
+
+SoUrCe  Product "../features/Product/Product.jak";
+
+@Entity
+@Table(name= "Product")
+public class Product extends  Product$$ProductCadastre {
+
+	private String tipo;
+	private String estadoDoProduto;
+	
+	public String getTipo() {
+		return tipo;
+	}
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public String getEstadoDoProduto() {
+		return estadoDoProduto;
+	}
+	public void setEstadoDoProduto(String estadoDoProduto) {
+		this.estadoDoProduto = estadoDoProduto;
+	}
+	
+}
