@@ -1,15 +1,20 @@
 
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-
-public class ProductCadastre {
+@Entity
+@Table(name= "Product")
+public class Product{
 	
-	private long id;
-	private String titulo;
-	private String descricao;
-	private List<String> fotos;
-	private String preco;
-	public long getId() {
+	@Id
+	@GeneratedValue
+	protected long id;
+	protected String titulo;
+	protected String descricao;
+	protected String foto;
+	protected String preco;
+	protected long getId() {
 		return id;
 	}
 	public void setId(long id) {
@@ -27,12 +32,7 @@ public class ProductCadastre {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	public List<String> getFotos() {
-		return fotos;
-	}
-	public void setFotos(List<String> fotos) {
-		this.fotos = fotos;
-	}
+	
 	public String getPreco() {
 		return preco;
 	}
@@ -40,5 +40,10 @@ public class ProductCadastre {
 		this.preco = preco;
 	}
 	
-	
+	public String getFoto(){
+		return foto;
+	}
+	public void setFoto(String foto){
+		this.foto=foto;
+	}
 }

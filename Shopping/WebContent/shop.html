@@ -1,69 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="shopping">
+<html ng-app="shopping">
 
-<head ng-include="'template/head.html'">
+<head >
+<base ng-include="'template/head.html'"></base>
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/shopping.js"></script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
 </head>
-<body ng-controller="userCadastreControl">
-
+<body ng-controller="userCadastreControl">	
 	<div ng-include="'template/header.html'"></div>
-	
 	<div class="single-product-area">
 		<div class="zigzag-bottom"></div>
 		<div class="container">
-			<div class="row">
-				<div class="col-md-3 col-sm-6" ng-repeat="a in [0,1,2,3,4,5,6,7,8] track by $index">
-					<div class="single-shop-product">
-						<div class="product-upper" >
-							<img src="img/product-2.jpg" alt="">
-						</div>
-						<h2 class="tituloProduto">
-							<a href="">Apple new mac book 2015 March :P</a>
-						</h2>
-						<div class="product-carousel-price">
-							<ins>$899.00</ins>
-							<del>$999.00</del>
-						</div>
-
-						<div class="product-option-shop">
-							<a class="add_to_cart_button" data-quantity="1"
-								data-product_sku="" data-product_id="70" rel="nofollow"
-								href="productDetails.html">Comprar</a>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="product-pagination text-center">
-						<nav>
-							<ul class="pagination">
-								<li><a href="#" aria-label="Previous"> <span
-										aria-hidden="true">&laquo;</span>
-								</a></li>
-								<li><a href="#">1</a></li>
-								<li><a href="#">2</a></li>
-								<li><a href="#">3</a></li>
-								<li><a href="#">4</a></li>
-								<li><a href="#">5</a></li>
-								<li><a href="#" aria-label="Next"> <span
-										aria-hidden="true">&raquo;</span>
-								</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
+		
+			<div ng-include="'listaProdutos.html'" ng-show="showList"></div>
+		
+		<div class="row" ng-include="'detailsPart/productDetail.html'" ng-show="showDetail">
 		</div>
 	</div>
+	</div>
 	<!-- Latest jQuery form server -->
-	<script src="https://code.jquery.com/jquery.min.js"></script>
+	
 
 	<!-- Bootstrap JS form CDN -->
-	<script
-		src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	
 
 	<!-- jQuery sticky menu -->
 	<script src="js/owl.carousel.min.js"></script>
@@ -75,4 +37,4 @@
 	<!-- Main Script -->
 	<script src="js/main.js"></script>
 </body>
-</html>
+</h   tml>

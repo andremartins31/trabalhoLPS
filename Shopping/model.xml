@@ -4,7 +4,7 @@
 			<and abstract="true" mandatory="true" name="Shopping">
 				<and mandatory="true" name="Shop">
 					<and name="paymentMethod">
-						<feature mandatory="true" name="Card"/>
+						<feature name="Card"/>
 						<feature name="BankSlip"/>
 					</and>
 				</and>
@@ -33,7 +33,7 @@
 					<feature mandatory="true" name="Other"/>
 					<feature mandatory="true" name="Product"/>
 				</or>
-				<feature mandatory="true" name="Search"/>
+				<feature name="Search"/>
 				<feature mandatory="true" name="dao"/>
 			</and>
 		</struct>
