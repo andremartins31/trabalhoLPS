@@ -97,9 +97,7 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			    // called asynchronously if an error occurs
 			    // or server returns response with an error status.
 				  console.log("Erro");
-			  });
-			
-		
+			  });	
 		};
 		
 	$scope.listProduct();
