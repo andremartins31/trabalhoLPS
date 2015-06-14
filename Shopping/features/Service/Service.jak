@@ -1,14 +1,14 @@
 
-public refines class Service {
-/*
-	private EnumService tipo;
+public class Service extends Product{
+
+	private String tipo;
 	private String localizacao;
 	private String areaAtuacao;
 	private String dadosDeContato;
-	public EnumService getTipo() {
+	public String getTipo() {
 		return tipo;
 	}
-	public void setTipo(EnumService tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 	public String getLocalizacao() {
@@ -28,6 +28,6 @@ public refines class Service {
 	}
 	public void setDadosDeContato(String dadosDeContato) {
 		this.dadosDeContato = dadosDeContato;
-	}*/
-		
+
+	}		
 }
