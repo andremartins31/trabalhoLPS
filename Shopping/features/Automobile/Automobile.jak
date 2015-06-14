@@ -1,7 +1,7 @@
 /**
  * TODO description
  */
-public class Automobile extends ProductCadastre{
+public class Automobile extends Product{
 	
 	private String marca;
 	private String modelo;

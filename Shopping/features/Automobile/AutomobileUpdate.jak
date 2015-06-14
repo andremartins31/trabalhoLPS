@@ -1,0 +1,37 @@
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/atualizarAutomobile")
+public class AutomobileUpdate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	protected void service(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		Automobile automobile = new Automobile();
+		automobile.setId(request.getParameter("id"));
+		automobile.setDescricao(request.getParameter("descricao"));
+		automobile.setFoto(request.getParameter("foto"));
+		automobile.setPreco(request.getParameter("preco"));
+		automobile.setTipo(request.getParameter("tipo"));
+		automobile.setTitulo(request.getParameter("titulo"));
+		automobile.setMarca(request.getParameter("marca"));
+		automobile.setModelo(request.getParameter("modelo"));
+		automobile.setAno(request.getParameter("ano"));
+		automobile.setCombustivel(request.getParameter("combustivel"));
+		automobile.setNumeroPortas(request.getParameter("numeroPortas"));
+		automobile.setQuilometrosRodados(request.getParameter("quilometrosRodados"));
+		automobile.setLocalizacaoVendedor(request.getParameter("localizacaoVendedor"));
+
+		ProductDao dao = new ProductDao();
+		dao.beginTransaction();
+		dao.update(automobile);
+		dao.close();
+	}
+
+}
