@@ -1,6 +1,9 @@
-/**
- * TODO description
- */
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="building")
 public class Building extends ProductCadastre{
 
 	private String estado;

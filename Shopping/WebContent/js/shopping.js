@@ -10,6 +10,9 @@ shopping.controller('userCadastreControl', function($scope, $http,$location) {
 	$scope.passoUM =true;
 	$scope.telaProduct = false;
 	$scope.telaServico = false;
+	$scope.telaImovel = false;
+	$scope.telaVeiculo = false;
+	$scope.telaOther = false;
 	
 	function serializeData(data) {
 		// If this is not an object, defer to native stringification.
@@ -152,6 +155,63 @@ shopping.controller('userCadastreControl', function($scope, $http,$location) {
 			}
 		}).success(function(data, status, headers, config) {
 			alert("Serviço cadastrado com sucesso");
+		}).error(function(data, status, headers, config) {
+			// called asynchronously if an error occurs
+			// or server returns response with an error status.
+			console.log("Erro");
+			alert("Erro" + status);
+		});
+	}
+	
+	$scope.cadastrarVeiculo = function() {
+			
+			$http({
+				method : 'POST',
+				url : 'cadastrarAutomobile',
+				data : serializeData($scope.veiculo),
+				headers : {
+					'Content-Type' : 'application/x-www-form-urlencoded'
+				}
+			}).success(function(data, status, headers, config) {
+				alert("Veículo cadastrado com sucesso");
+			}).error(function(data, status, headers, config) {
+				// called asynchronously if an error occurs
+				// or server returns response with an error status.
+				console.log("Erro");
+				alert("Erro" + status);
+			});
+		}
+	
+	$scope.cadastrarImovel = function() {
+		
+		$http({
+			method : 'POST',
+			url : 'cadastrarBuilding',
+			data : serializeData($scope.imovel),
+			headers : {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			}
+		}).success(function(data, status, headers, config) {
+			alert("Imóvel cadastrado com sucesso");
+		}).error(function(data, status, headers, config) {
+			// called asynchronously if an error occurs
+			// or server returns response with an error status.
+			console.log("Erro");
+			alert("Erro" + status);
+		});
+	}
+	
+$scope.cadastrarOutro = function() {
+		
+		$http({
+			method : 'POST',
+			url : 'cadastrarOther',
+			data : serializeData($scope.outro),
+			headers : {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			}
+		}).success(function(data, status, headers, config) {
+			alert("Produto cadastrado com sucesso");
 		}).error(function(data, status, headers, config) {
 			// called asynchronously if an error occurs
 			// or server returns response with an error status.
