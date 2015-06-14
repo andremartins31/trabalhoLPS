@@ -1,0 +1,31 @@
+
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/cadastrarOther")
+public class OtherCadastre extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	protected void service(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		Other other = new Other();
+		other.setDescricao(request.getParameter("descricao"));
+		other.setFoto(request.getParameter("foto"));
+		other.setPreco(request.getParameter("preco"));
+		other.setTipo(request.getParameter("tipo"));
+		other.setTitulo(request.getParameter("titulo"));
+		other.setLocalizacaoVendedor(request.getParameter("localizacaoVendedor"));;
+
+		OtherDao dao = new OtherDao();
+		dao.beginTransaction();
+		dao.save(other);
+		dao.close();
+	}
+
+}
