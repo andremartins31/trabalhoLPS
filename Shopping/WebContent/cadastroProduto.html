@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="shopping">
+<html ng-app="shopping">
 
-<head ng-include="'template/head.html'">
+<head>
+<base ng-include="'template/head.html'"></base>
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/shopping.js"></script>
 <meta charset="UTF-8">
@@ -15,11 +16,14 @@
 	<!-- End mainmenu area -->
 	<div class="single-product-area">
 		<div class="zigzag-bottom"></div>
+		<div ng-include="'forms/cadastroProdutoPassoUm.html'" ng-show="passoUM"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4"></div>
 				<div class="col-md-8">
-					<div ng-include="'forms/produto.html'"></div>
+					<div ng-include="'forms/produto.html'" ng-show="telaProduct"></div>
+					<div ng-include="'forms/servico.html'" ng-show="telaServico"></div>
+					
 				</div>
 			</div>
 		</div>

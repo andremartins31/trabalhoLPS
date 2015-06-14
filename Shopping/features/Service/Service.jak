@@ -6,16 +6,11 @@ import javax.persistence.Table;
 @Table(name="servico")
 public class Service extends Product{
 
-	private String tipo;
+	
 	private String localizacao;
 	private String areaAtuacao;
 	private String dadosDeContato;
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
+
 	public String getLocalizacao() {
 		return localizacao;
 	}

@@ -1,0 +1,66 @@
+<meta charset="UTF-8">
+<form class="checkout" method="post" name="checkout">
+	<div id="customer_details" class="col2-set">
+		<div class="col-1">
+			<div class="woocommerce-billing-fields">
+				<h3>Cadastro de Servico</h3>
+				<p id="billing_country_field"
+					class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+					<label class="" for="titulo">Título do Anúncio <abbr title="required"
+						class="required">*</abbr>
+
+					</label> <input type="text" ng-model="servico.titulo" value="" placeholder=""
+						name="titulo" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="descricao">Descrição <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" ng-model="servico.descricao"
+						placeholder="" name="descricao" class="input-text ">
+				</p>
+				
+				<div class="clear"></div>
+
+				<p class="form-row form-row-first validate-required validate-email">
+					<label class="" for="foto">Fotos <abbr title="required"
+						class="required">*</abbr>
+					</label> <input type="foto" value="" ng-model="servico.foto" placeholder=""
+						name="email" class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="preco">Preço <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="servico.preco"
+						  class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="tipo">Tipo <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="servico.tipo"
+						  class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="localizacao">Localização do serviço<abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="servico.estado"
+						  class="input-text ">
+				</p>
+				
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="area">Area de Atuação <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="servico.area"
+						  class="input-text ">
+				</p>
+				
+				<p class="form-row form-row-last validate-required validate-phone">
+					<label class="" for="contato">Contato<abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="servico.contato"
+						  class="input-text ">
+				</p>
+				<div class="clear"></div>
+				<button class="btn btn-success" ng-click="cadastrarServico()">Cadastrar</button>
+			</div>
+		</div>
+</form>
