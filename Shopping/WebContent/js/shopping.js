@@ -70,7 +70,7 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			alert("Erro"+ status);
 		});
 	};
-	$scope.listProduct= function(){
+	$scope.listProducts= function(){
 		
 		$http({
 			method : 'GET',
@@ -100,7 +100,7 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			  });	
 		};
 		
-	$scope.listProduct();
+	$scope.listProducts();
 	
 	});
 
