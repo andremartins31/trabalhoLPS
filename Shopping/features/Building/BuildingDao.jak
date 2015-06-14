@@ -1,0 +1,7 @@
+
+public class BuildingDao extends GenericJPADAO<Building>{
+	public BuildingDao(){
+		this.persistentClass = Building.class;
+	}
+
+}

@@ -28,7 +28,7 @@ public class AutomobileUpdate extends HttpServlet {
 		automobile.setQuilometrosRodados(request.getParameter("quilometrosRodados"));
 		automobile.setLocalizacaoVendedor(request.getParameter("localizacaoVendedor"));
 
-		ProductDao dao = new ProductDao();
+		AutomobileDao dao = new AutomobileDao();
 		dao.beginTransaction();
 		dao.update(automobile);
 		dao.close();
