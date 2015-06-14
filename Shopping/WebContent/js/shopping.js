@@ -1,36 +1,37 @@
 var shopping = angular.module('shopping', []);
-shopping.controller('userCadastreControl', function($scope, $http) {
+shopping.controller('userCadastreControl', function($scope, $http,$location) {
 	$scope.user = {};
-	$scope.produto={};
-	$scope.listProduct=[];
-	$scope.showList=true;
-	$scope.showDetail=false;
-	function serializeData( data ) { 
-	    // If this is not an object, defer to native stringification.
-	    if ( ! angular.isObject( data ) ) { 
-	        return( ( data == null ) ? "" : data.toString() ); 
-	    }
+	$scope.produto = {};
+	$scope.listProduct = [];
+	$scope.showList = true;
+	$scope.showDetail = false;
+	$scope.user = undefined;
+	function serializeData(data) {
+		// If this is not an object, defer to native stringification.
+		if (!angular.isObject(data)) {
+			return ((data == null) ? "" : data.toString());
+		}
 
-	    var buffer = [];
+		var buffer = [];
 
-	    // Serialize each key in the object.
-	    for ( var name in data ) { 
-	        if ( ! data.hasOwnProperty( name ) ) { 
-	            continue; 
-	        }
+		// Serialize each key in the object.
+		for ( var name in data) {
+			if (!data.hasOwnProperty(name)) {
+				continue;
+			}
 
-	        var value = data[ name ];
+			var value = data[name];
 
-	        buffer.push(
-	            encodeURIComponent( name ) + "=" + encodeURIComponent( ( value == null ) ? "" : value )
-	        ); 
-	    }
+			buffer.push(encodeURIComponent(name) + "="
+					+ encodeURIComponent((value == null) ? "" : value));
+		}
 
-	    // Serialize the buffer and clean it up for transportation.
-	    var source = buffer.join( "&" ).replace( /%20/g, "+" ); 
-	    return( source ); 
-	};
-	
+		// Serialize the buffer and clean it up for transportation.
+		var source = buffer.join("&").replace(/%20/g, "+");
+		return (source);
+	}
+	;
+
 	$scope.cadastrar = function() {
 
 		$http({
@@ -47,7 +48,7 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			// called asynchronously if an error occurs
 			// or server returns response with an error status.
 			console.log("Erro");
-			alert("Erro"+ status);
+			alert("Erro" + status);
 		});
 	};
 
@@ -67,11 +68,11 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			// called asynchronously if an error occurs
 			// or server returns response with an error status.
 			console.log("Erro");
-			alert("Erro"+ status);
+			alert("Erro" + status);
 		});
 	};
-	$scope.listProducts= function(){
-		
+	$scope.listProducts = function() {
+
 		$http({
 			method : 'GET',
 			url : 'listarProdutos',
@@ -84,23 +85,41 @@ shopping.controller('userCadastreControl', function($scope, $http) {
 			console.log("Erro");
 		});
 	};
-	
-	$scope.logar= function(){
-			
-			$http( {method:'POST',
-				url:'login',
-				data: serializeData($scope.user),
-				headers: {'Content-Type': 'application/x-www-form-urlencoded'}}
-			).success(function(data, status, headers, config) {
-			    console.log("sucess");
-			  }).error(function(data, status, headers, config) {
-			    // called asynchronously if an error occurs
-			    // or server returns response with an error status.
-				  console.log("Erro");
-			  });	
-		};
-		
+
+	$scope.logar = function() {
+
+		$http({
+			method : 'POST',
+			url : 'login',
+			data : serializeData($scope.user),
+			headers : {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			}
+		}).success(function(data, status, headers, config) {
+			 $scope.user=data;
+		}).error(function(data, status, headers, config) {
+			alert("Login inválido!");
+		});
+	};
+
 	$scope.listProducts();
 	
-	});
-
+	
+	
+	$scope.isLogado = function() {
+		if($scope.user != undefined){
+			return true;
+		}else{
+			return false;
+			
+		}
+		}
+		
+	$scope.btnCadastrarProd= function() {
+		if ($scope.isLogado()) {
+			window.location='cadastroProduto.html';
+		}else{
+			window.location='login.html';
+		}
+	}
+});
