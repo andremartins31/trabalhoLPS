@@ -1,0 +1,39 @@
+
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/atualizarBuilding")
+public class BuildingUpdate extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	protected void service(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		Building building = new Building();
+		building.setId(request.getParameter("id"));
+		building.setDescricao(request.getParameter("descricao"));
+		building.setFoto(request.getParameter("foto"));
+		building.setPreco(request.getParameter("preco"));
+		building.setTipo(request.getParameter("tipo"));
+		building.setTitulo(request.getParameter("titulo"));
+		building.setEstado(request.getParameter("estado"));
+		building.setCidade(request.getParameter("cidade"));
+		building.setBairro(request.getParameter("bairro"));
+		building.setRua(request.getParameter("rua"));
+		building.setNumero(request.getParameter("numero"));
+		building.setNumeroQuatos(request.getParameter("numeroQuatos"));
+		building.setNumeroBanheiro(request.getParameter("numeroBanheiro"));
+		building.setNumOutrosProdutos(request.getParameter("numOutrosProdutos"));
+
+		BuildingDao dao = new BuildingDao();
+		dao.beginTransaction();
+		dao.update(building);
+		dao.close();
+	}
+
+}

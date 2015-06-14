@@ -1,0 +1,7 @@
+
+public class OtherDao extends GenericJPADAO<Other>{
+	public OtherDao(){
+		this.persistentClass = Other.class;
+	}
+
+}
