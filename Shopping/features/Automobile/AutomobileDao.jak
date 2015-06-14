@@ -1,0 +1,7 @@
+
+public class AutomobileDao extends GenericJPADAO<Service>{
+	public ServiceDao(){
+		this.persistentClass =Service.class;
+	}
+
+}
