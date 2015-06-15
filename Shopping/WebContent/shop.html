@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="shopping">
 
-<head >
+<head>
 <base ng-include="'template/head.html'"></base>
 <script type="text/javascript" src="js/angular.min.js"></script>
 <script type="text/javascript" src="js/shopping.js"></script>
@@ -9,23 +9,24 @@
 <script src="js/bootstrap.min.js"></script>
 <meta charset="UTF-8">
 </head>
-<body ng-controller="userCadastreControl">	
+<body ng-controller="userCadastreControl">
 	<div ng-include="'template/header.html'"></div>
 	<div class="single-product-area">
 		<div class="zigzag-bottom"></div>
 		<div class="container">
-		
+
 			<div ng-include="'listaProdutos.html'" ng-show="showList"></div>
-		
-		<div class="row" ng-include="'detailsPart/productDetail.html'" ng-show="showDetail">
+			<div class="row" ng-include="'detailsPart/productDetail.html'"
+				ng-show="showDetail"></div>
+			<div ng-include="'pagamento.html'" ng-show="showPagamento"></div>
+
 		</div>
 	</div>
-	</div>
 	<!-- Latest jQuery form server -->
-	
+
 
 	<!-- Bootstrap JS form CDN -->
-	
+
 
 	<!-- jQuery sticky menu -->
 	<script src="js/owl.carousel.min.js"></script>

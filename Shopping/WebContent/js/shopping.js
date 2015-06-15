@@ -1,16 +1,42 @@
 var shopping = angular.module('shopping', []);
-shopping.controller('userCadastreControl', function($scope, $http,$location) {
+shopping.controller('userCadastreControl', function($scope, $http, $location) {
 	$scope.user = {};
 	$scope.produto = {};
-	$scope.servico={};
+	$scope.servico = {};
 	$scope.listProduct = [];
 	$scope.showList = true;
 	$scope.showDetail = false;
+	$scope.showPagamento= false;
 	$scope.user = undefined;
-	$scope.passoUM =true;
+	$scope.passoUM = true;
 	$scope.telaProduct = false;
 	$scope.telaServico = false;
+	$scope.configuracao = [];
+	$scope.showProdutos = false;
+	$scope.showServico = false;
+	$scope.showImoveis = false;
+	$scope.showVeiculo = false;
+	$scope.showOutros = false;
 	
+	$scope.clean=function(){
+		$scope.user = {};
+		$scope.produto = {};
+		$scope.servico = {};
+		$scope.listProduct = [];
+		$scope.showList = true;
+		$scope.showDetail = false;
+		$scope.user = undefined;
+		$scope.passoUM = true;
+		$scope.telaProduct = false;
+		$scope.telaServico = false;
+		$scope.configuracao = [];
+		$scope.showProdutos = false;
+		$scope.showServico = false;
+		$scope.showImoveis = false;
+		$scope.showVeiculo = false;
+		$scope.showOutros = false;
+	};
+
 	function serializeData(data) {
 		// If this is not an object, defer to native stringification.
 		if (!angular.isObject(data)) {
@@ -101,33 +127,32 @@ shopping.controller('userCadastreControl', function($scope, $http,$location) {
 				'Content-Type' : 'application/x-www-form-urlencoded'
 			}
 		}).success(function(data, status, headers, config) {
-			 $scope.user=data;
+			$scope.user = data;
+			window.location;
 		}).error(function(data, status, headers, config) {
 			alert("Login inválido!");
 		});
 	};
 
 	$scope.listProducts();
-	
-	
-	
+
 	$scope.isLogado = function() {
-		if($scope.user != undefined){
+		if ($scope.user != undefined) {
 			return true;
-		}else{
+		} else {
 			return false;
-			
-		}
-		}
-		
-	$scope.btnCadastrarProd= function() {
-		if ($scope.isLogado()) {
-			window.location='cadastroProduto.html';
-		}else{
-			window.location='login.html';
+
 		}
 	}
-	$scope.segundoPasso= function(opcao) {
+
+	$scope.btnCadastrarProd = function() {
+		if ($scope.isLogado()) {
+			window.location = 'cadastroProduto.html';
+		} else {
+			window.location = 'login.html';
+		}
+	}
+	$scope.segundoPasso = function(opcao) {
 		$scope.passoUM = false;
 		switch (opcao) {
 		case 1:
@@ -138,11 +163,11 @@ shopping.controller('userCadastreControl', function($scope, $http,$location) {
 		default:
 			break;
 		}
-		
+
 	}
-	
+
 	$scope.cadastrarServico = function() {
-		
+
 		$http({
 			method : 'POST',
 			url : 'cadastrarServico',
@@ -159,4 +184,57 @@ shopping.controller('userCadastreControl', function($scope, $http,$location) {
 			alert("Erro" + status);
 		});
 	}
+	$scope.config=[];
+$scope.configurar = function() {
+		
+		for ( var con in $scope.config) {
+			switch ($scope.config[con]) {
+			case "Product":
+				$scope.showProdutos = true;
+				break;
+			case "Service":
+				$scope.showServico = true;
+				break;
+			case "Building":
+				$scope.showImoveis = true;
+				break;
+			case "Other":
+				$scope.showOutros = true;
+				break;
+			case "Automobile":
+				$scope.showVeiculo = true;
+				break;
+
+			default:
+				break;
+			}
+		}
+
+	}
+	$scope.getConfiguration = function() {
+		var con=[];
+		$http({
+			method : 'GET',
+			url : 'configuracao'
+			
+		}).success(function(data, status, headers, config) {
+			$scope.config=data;
+			$scope.configurar();
+		}).error(function(data, status, headers, config) {
+			console.log("Erro");
+		}).then;
+		return con;
+	};
+	$scope.getConfiguration();
+	
+	$scope.openDetals=function(item){
+		$scope.produto =item;
+		$scope.showList = false;
+		$scope.showDetail = true;
+	}
+	$scope.openPagamento=function(){
+		$scope.showDetail = false;
+		$scope.showPagamento=true;
+	}
+
 });
