@@ -128,7 +128,7 @@ shopping.controller('userCadastreControl', function($scope, $http, $location) {
 			}
 		}).success(function(data, status, headers, config) {
 			$scope.user = data;
-			window.location;
+			window.location = "cadastroProduto.html";
 		}).error(function(data, status, headers, config) {
 			alert("Login inválido!");
 		});
