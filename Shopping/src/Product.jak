@@ -54,7 +54,7 @@ abstract class Product$$ProductCadastre{
 SoUrCe  Product "../features/Product/Product.jak";
 
 @Entity
-@Table(name= "Product")
+@Table(name="product")
 public class Product extends  Product$$ProductCadastre {
     
 	private String tipo;

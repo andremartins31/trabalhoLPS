@@ -1,6 +1,8 @@
-/**
- * TODO description
- */
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="other")
 public class Other extends Product{
 
 	private String localizacaoVendedor;

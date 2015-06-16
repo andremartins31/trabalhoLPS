@@ -1,0 +1,95 @@
+<meta charset="UTF-8">
+<form class="checkout" method="post" name="checkout">
+
+	<div id="customer_details" class="col2-set">
+		<div class="col-1">
+			<div class="woocommerce-billing-fields">
+				<h3>Cadastro de Imóvel</h3>
+				<p id="billing_country_field"
+					class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+					<label class="" for="titulo">Título do Anúncio <abbr title="required"
+						class="required">*</abbr>
+
+					</label> <input type="text" ng-model="imovel.titulo" value="" placeholder=""
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="descricao">Descrição <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" ng-model="imovel.descricao"
+						placeholder="" class="input-text ">
+				</p>
+				
+				<div class="clear"></div>
+
+				<p class="form-row form-row-first validate-required">
+					<label class="" for="foto">Fotos <abbr title="required"
+						class="required">*</abbr>
+					</label> <input type="foto" value="" ng-model="imovel.foto" placeholder=""
+					 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="preco">Preço <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.preco"
+						 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Tipo <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.tipo"
+						class="input-text ">
+				</p>		
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Estado <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.estado"
+					 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Cidade <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.cidade"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Bairro <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.bairro"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Rua <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.rua"
+						 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Número da residência <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.numero"
+						 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Quantidade de quartos <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.numeroQuatos"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Quantidade de banheiros <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.numeroBanheiro"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="estado">Quantidade de outros Cômodos <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="imovel.numOutrosProdutos"
+						class="input-text ">
+				</p>
+				<div class="clear"></div>
+				<button class="btn btn-success" ng-click="cadastrarImovel()">Cadastrar</button>
+			</div>
+		</div>
+</form>

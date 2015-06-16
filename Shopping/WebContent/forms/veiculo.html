@@ -1,0 +1,90 @@
+<meta charset="UTF-8">
+<form class="checkout" method="post" name="checkout">
+
+	<div id="customer_details" class="col2-set">
+		<div class="col-1">
+			<div class="woocommerce-billing-fields">
+				<h3>Cadastro de Veículo</h3>
+				<p id="billing_country_field"
+					class="form-row form-row-wide address-field update_totals_on_change validate-required woocommerce-validated">
+					<label class="" for="titulo">Título do Anúncio <abbr title="required"
+						class="required">*</abbr>
+
+					</label> <input type="text" ng-model="veiculo.titulo" value="" placeholder=""
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="descricao">Descrição <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" ng-model="veiculo.descricao"
+						placeholder="" class="input-text ">
+				</p>
+				
+				<div class="clear"></div>
+
+				<p class="form-row form-row-first validate-required">
+					<label class="" for="foto">Fotos <abbr title="required"
+						class="required">*</abbr>
+					</label> <input type="foto" value="" ng-model="veiculo.foto" placeholder=""
+					 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="preco">Preço <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.preco"
+						 class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Tipo <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.tipo"
+						class="input-text ">
+				</p>		
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Marca <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.marca"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Modelo <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.modelo"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Ano <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.ano"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Combustível <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.combustivel"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Número de portas <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.numeroPortas"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Quilômetros rodados <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.quilometrosRodados"
+						class="input-text ">
+				</p>
+				<p class="form-row form-row-last validate-required">
+					<label class="" for="tipo">Localização Vendedor <abbr
+						title="required" class="required">*</abbr>
+					</label> <input type="text" value="" placeholder="" ng-model="veiculo.localizacaoVendedor"
+						class="input-text ">
+				</p>
+				
+				<div class="clear"></div>
+				<button class="btn btn-success" ng-click="cadastrarVeiculo()">Cadastrar</button>
+			</div>
+		</div>
+</form>
