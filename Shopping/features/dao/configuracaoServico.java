@@ -25,7 +25,6 @@ public class configuracaoServico extends HttpServlet {
 		s.add("Seller");
 		s.add("Sell");
 		s.add("ProductCadastre");
-		s.add("Service");
 		s.add("Product");
 		s.add("dao");
 		

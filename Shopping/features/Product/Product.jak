@@ -4,7 +4,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "Product")
 public refines class Product{
-
+    
 	private String tipo;
 	private String estadoDoProduto;
 	

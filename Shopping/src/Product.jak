@@ -56,7 +56,7 @@ SoUrCe  Product "../features/Product/Product.jak";
 @Entity
 @Table(name= "Product")
 public class Product extends  Product$$ProductCadastre {
-
+    
 	private String tipo;
 	private String estadoDoProduto;
 	
